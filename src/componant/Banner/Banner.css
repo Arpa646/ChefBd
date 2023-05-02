@@ -1,0 +1,14 @@
+.banner-design {
+    background-image: url('../../assets/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    color: white;
+}
+
+.display {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
