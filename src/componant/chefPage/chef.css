@@ -1,3 +1,7 @@
 .size{
     width: 18rem;
 }
+.display-design{
+    display: flex;
+    justify-content: center;
+}

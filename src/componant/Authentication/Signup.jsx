@@ -1,7 +1,7 @@
 //import { createUserWithEmailAndPassword, getAuth, sendEmailVerification } from 'firebase/auth';
 import React, { useContext, useState } from 'react';
 import { AuthMaster } from '../Contexapi';
-import { GoogleAuthProvider, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
+import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import './user.css'
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
@@ -12,6 +12,7 @@ const Signup = () => {
   
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
+    const Githubprovider = new GithubAuthProvider();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -129,6 +130,28 @@ console.log(user)
         // ...
       });
   }
+  const signInwithGitHub=()=>{
+    signInWithPopup(auth, Githubprovider)
+    .then((result) => {
+      // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+      const credential = GithubAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+  
+      // The signed-in user info.
+      const user = result.user;
+    console.log(user)
+      // ...
+    }).catch((error) => {
+      // Handle Errors here.
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // The email of the user's account used.
+      const email = error.customData.email;
+      // The AuthCredential type that was used.
+      
+      // ...
+    });
+  }
 
   return (
     <div>
@@ -144,13 +167,14 @@ console.log(user)
             {emailError && <span className="error">{emailError}</span>}
             <input type="password" name="pass" placeholder="Password" value={password} onChange={handlePasswordChange} />
             {passwordError && <span className="error">{passwordError}</span>}
-            <input type="text" name="photo"  onChange={handlePhotoChange} />
+            <input type="text" name="photo"  onChange={handlePhotoChange} placeholder="Upload Photo link" />
             <input type="submit" value="Create Account" />
             <p>already Have Account?<Link to="/logIn">SignIN</Link></p>
     
             <br />
           </form>
           <button className='btn btn-info m-3' onClick={signInwithGoogle}>SignUp with google</button>
+          {/* <button className='btn btn-info m-3' onClick={signInwithGitHub}>SignUp with Github</button> */}
         </div>
       </div>
       

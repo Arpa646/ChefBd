@@ -2,14 +2,17 @@
 import React, { useContext, useState } from 'react';
 import { AuthMaster } from '../Contexapi';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
 
 
 const SignIn = () => {
+    const navigate=useNavigate()
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
-
+    const location=useLocation()
+    console.log(location)
+    const from=location.state?.from?.pathname || '/'
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
   
@@ -106,7 +109,10 @@ const [error,setError]=useState('')
                 const user = result.user;
                 // IdP data available using getAdditionalUserInfo(result)
                 // ...
+               
                 console.log(user)
+                navigate(from)
+                
             }).catch((error) => {
                 // Handle Errors here.
                 const errorCode = error.code;

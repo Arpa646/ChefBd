@@ -1,0 +1,10 @@
+.userPhoto{
+  width: 20%;
+}
+
+.nav-design a{
+  text-decoration: none;
+  margin: 10px;
+  color: wheat;
+  font-size: 20px;
+}

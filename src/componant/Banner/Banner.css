@@ -2,7 +2,7 @@
     background-image: url('../../assets/banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
     color: white;
 }
 
@@ -10,5 +10,7 @@
     display: flex;
     text-align: center;
     align-items: center;
-    padding: 10px;
+
+  margin-left: 4%;
+    margin-top: 10%;
 }

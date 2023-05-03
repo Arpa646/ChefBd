@@ -16,6 +16,7 @@ import Details from './componant/Details/Details';
 import Signup from './componant/Authentication/Signup';
 import SignIn from './componant/Authentication/SignIn';
 import ContexAuth from './componant/Contexapi';
+import PrivateRoute from './PrivateRoute';
 
 
 
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
 
   {
     path: "/details/:id",
-    element: <Details></Details>,
+    element: <PrivateRoute><Details></Details></PrivateRoute>,
     loader: ({ params }) => fetch(`http://localhost:7000/chef/${params.id}`)
   },
   {

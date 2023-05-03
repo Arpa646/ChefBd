@@ -9,7 +9,7 @@ const ChefPage = () => {
         .then(data=>setChef(data))
     },[])
     return (
-        <div className='display '>
+        <div className='display-design flex-wrap  container'>
             {
                 chef &&  chef.map(rec=><RecipieCard chef={rec} key={rec.id}></RecipieCard>) 
             }

@@ -1,16 +1,20 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthMaster } from './Contexapi';
-
+import '../App.css'
 const Navbar = () => {
-    const { user,logOut } = useContext(AuthMaster)
+    const { user,logOut,loading } = useContext(AuthMaster)
     console.log(user)
     const handleLogout=()=>{
         logOut()
     }
+    if(loading)
+    {
+        return <h1>loading</h1>
+    }
     //  const[userr,setUser]=useState(null)
     return (
-        <div>
+        <div className='p-3'>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Navbar</a>
@@ -18,24 +22,31 @@ const Navbar = () => {
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav">
-                            <Link class="nav-item">
-                                <a class="nav-link active" aria-current="page" >Recipie</a>
+                        <ul class="navbar-nav nav-design  w-100">
+                            <div className='me-auto'>
+                            <Link class="">
+                                <a class="" aria-current="page" >Recipie</a>
                             </Link>
-                            <Link class="nav-item">
-                                <a class="nav-link" >Home</a>
+                            <Link to="/">
+                                <a class="" >Home</a>
                             </Link>
-                            <Link class="nav-item">
-                                <a class="nav-link">Blog</a>
+                            <Link class="">
+                                <a class="">Blog</a>
                             </Link>
+                            </div>
                             {/* <Link to="/logIn"><button>Login</button></Link>
         <Link to="/Register"><button>SignUp</button></Link> */}
-                            <Link class="nav-item dropdown">
-
+                           <div>
+                           <Link class="nav-item dropdown  ">
+                           
+                                
                                 {
-                                    user ? <><img  title={user.displayName} src={user.photoURL} className='w-25 rounded' alt='img'></img>  <button onClick={handleLogout}>Logout</button></> :<> <Link to="/logIn"><button>Login</button></Link> <Link to="/Register"><button>SignUp</button></Link></>
-                                }
+                                        user ? <><img  title={user.displayName} src={user.photoURL} className='userPhoto rounded' alt='img'></img>  <button className='btn btn-info' onClick={handleLogout}>Logout</button></> :<> <Link to="/logIn"><button>Login</button></Link> <Link to="/Register"><button>SignUp</button></Link></>
+                                    }
+                             
                             </Link>
+                           </div>
+                           
                         </ul>
                     </div>
                 </div>
