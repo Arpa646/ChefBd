@@ -6,13 +6,18 @@ import ChefPage from './chefPage/ChefPage';
 import PartOne from './ExtraPart/PartOne';
 import PartTwo from './ExtraPart/PartTwo';
 import { AuthMaster } from './Contexapi';
+import Footer from './Footer';
 
 
 const Home = () => {
     const {loading } = useContext(AuthMaster)
     if(loading)
     {
-        return <h1>loading</h1>
+        return <div class="d-flex justify-content-center my-5">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
     }
     return (
         <div className=''>
@@ -22,7 +27,7 @@ const Home = () => {
             <ChefPage></ChefPage>
             <PartOne></PartOne>
             <PartTwo></PartTwo>
-            <Outlet></Outlet>
+            <Footer></Footer>
         </div>
     );
 };

@@ -19,9 +19,9 @@ const RecipieCard = ({ chef }) => {
                 <div class="card-body">
                     <h5 class="card-title">Chef Name: {name}</h5>
                     <p class="card-text"> {experience} Years Experience</p>
-                    <h5>creating {recipieNumber} recipie</h5>
+                    <h5>creating {recipieNumber} recipies</h5>
                     <h3>{likes} likes </h3>
-                    <Link to={`/details/${id}`}><button className='btn btn-info'>See Recipie..</button></Link>
+                    <Link to={`/details/${id}`}><button className='button3'>See Recipie..</button></Link>
                 </div>
             </div>
         </div>

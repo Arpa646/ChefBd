@@ -7,8 +7,8 @@ const Banner = () => {
                 <img class="card-img cc" src="https://fastwpdemo.com/newwp/ticrou/wp-content/uploads/2022/09/gallery-3.jpg" alt="Card image"/>
                     <div class="card-img-overlay display">
                        <div>
-                       <h1 class="card-title fw-bold">BEST CHEF WHIT THEIR BES <br /> <span>Recipie</span></h1>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                       <h3 class="card-title fw-bold ">BEST CHEF WHIT THEIR BEST <br /> <span className='orange'>RECEPIE</span></h3>
+                        <p class="card-text">Best chef always doing their best to make best food</p>
                        <button className='button'>See Recipie</button>
                        </div>
                     </div>

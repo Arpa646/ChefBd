@@ -4,16 +4,22 @@ import './chef.css'
 const ChefPage = () => {
     const [chef,setChef]=useState(null)
     useEffect(()=>{
-        fetch('http://localhost:7000/chef')
+        fetch('https://server-chef-arpa646.vercel.app/chef')
         .then(res=>res.json())
         .then(data=>setChef(data))
     },[])
     return (
-        <div className='display-design flex-wrap  container'>
-            {
-                chef &&  chef.map(rec=><RecipieCard chef={rec} key={rec.id}></RecipieCard>) 
-            }
-        </div>
+    <> <h1 className='fw-bold text-center p-lg-5 mt-3'>Out Best Chef</h1>
+         <div className='display-design flex-wrap  container'>
+          
+           
+          {
+              chef &&  chef.map(rec=><RecipieCard chef={rec} key={rec.id}></RecipieCard>) 
+          }
+          
+      </div>
+    </>
+       
     );
 };
 

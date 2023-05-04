@@ -4,7 +4,9 @@ width: 50px;
 .userPhoto img{
    
 }
-
+.orange{
+  color: orangered;
+}
 .nav-design a{
   text-decoration: none;
   margin: 10px;

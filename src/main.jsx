@@ -20,6 +20,7 @@ import PrivateRoute from './PrivateRoute';
 import Error from './componant/Error';
 import Blog from './componant/blog/Blog';
 import Recipie from './componant/Recipie';
+import N from './N';
 
 
 
@@ -34,11 +35,16 @@ const router = createBrowserRouter([
   {
     path: "/details/:id",
     element: <PrivateRoute><Details></Details></PrivateRoute>,
-    loader: ({ params }) => fetch(`http://localhost:7000/chef/${params.id}`)
+     loader: ({ params }) => fetch(`https://server-chef-arpa646.vercel.app/chef/${params.id}`)
+    // loader: ({ params }) => fetch(`https://server-chef-arpa646.vercel.app/chef/${params.id}`)
   },
   {
     path:"/Register",
     element:<Signup></Signup>
+  },
+  {
+    path:"/n",
+    element:<N></N>
   },
   {
     path:"/logIn",

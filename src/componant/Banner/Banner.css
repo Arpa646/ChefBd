@@ -18,6 +18,14 @@
   background-color: rgba(235, 80, 24, 0.92);
   border-radius: 5px;
 }
+.button3{
+  border-radius: 5px;
+  border: none;
+  padding: 7px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgba(255, 81, 18, 0.701); 
+}
 .button2 {
   border-radius: 5px;
   border: none;

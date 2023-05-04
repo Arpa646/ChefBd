@@ -1,5 +1,6 @@
 .pgoto{
     display: flex;
+    max-width: 340px;
 }
 .mm{
    width: 93%;

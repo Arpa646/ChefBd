@@ -7,7 +7,7 @@ import RecipieDEtails from './RecipieDEtails';
 const Details = () => {
     const data = useLoaderData();
     console.log(data);
-    const{name,experience,recipieNumber,likes,recipes}=data
+    const{name,experience,recipieNumber,likes,recipes ,chefBio}=data
     console.log('this is all',recipes)
     return (
         
@@ -28,12 +28,13 @@ const Details = () => {
                 <div className="col-lg-4">
                     <div className="card card-design">
                        <div>
-                    <img className="w-50 d-block m-auto p-3"src={data.photo} alt="" srcset="" />
+                    <img className="w-100 d-block m-auto p-3"src={data.photo} alt="" srcset="" />
                     <div class="card-body text-center">
                         <h5 class="card-title">Chef Name: {name}</h5>
                         <p class="card-text"> {experience} Years Experience</p>
                         <h5>creating {recipieNumber} recipie</h5>
                         <h3>{likes} likes </h3>
+                  <p>{chefBio}</p>
                       
                     </div>
                        </div>
@@ -48,7 +49,7 @@ const Details = () => {
                
                     <div class="recipe-card">
                           <div class="recipe-info">
-                                <h2>Recipe Name 1</h2>
+                               
                                
 
 
