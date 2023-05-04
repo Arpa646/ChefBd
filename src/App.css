@@ -1,19 +1,20 @@
 .userPhoto{
-width: 50px;
-}
-.userPhoto img{
-   
-}
-.orange{
-  color: orangered;
-}
-.nav-design a{
-  text-decoration: none;
-  margin: 10px;
-  color: rgb(0, 0, 0);
-  font-size: 20px;
+  width: 50px;
+  }
+  .userPhoto img{
+     
+  }
+  .orange{
+    color: orangered;
+  }
+  .nav-design a{
+    text-decoration: none;
+    margin: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    
+  }
+  .navdesign{
+    background-color: rgba(73, 149, 15, 0.733);
+  }
   
-}
-.navdesign{
-  background-color: rgba(73, 149, 15, 0.733);
-}
