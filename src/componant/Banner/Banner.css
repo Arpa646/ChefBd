@@ -1,16 +1,36 @@
 .banner-design {
-    background-image: url('../../assets/banner.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    color: white;
+  /* background-image: url('../../assets/banner.jpg'); */
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.cc {
+  opacity: 0.3;
+}
+
+.button {
+  border: none;
+  padding: 7px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(235, 80, 24, 0.92);
+  border-radius: 5px;
+}
+.button2 {
+  border-radius: 5px;
+  border: none;
+  padding: 7px 20px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(235, 80, 24, 0.701);
 }
 
 .display {
-    display: flex;
-    text-align: center;
-    align-items: center;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 
-  margin-left: 4%;
-    margin-top: 10%;
 }

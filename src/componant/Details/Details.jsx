@@ -10,7 +10,9 @@ const Details = () => {
     const{name,experience,recipieNumber,likes,recipes}=data
     console.log('this is all',recipes)
     return (
+        
         <div className='container'>
+        
         <Navbar></Navbar>
             <header>
 

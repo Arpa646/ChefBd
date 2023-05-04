@@ -3,12 +3,12 @@ import React, { useContext, useState } from 'react';
 import { AuthMaster } from '../Contexapi';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import './user.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
 
 
 const Signup = () => {
-
+  const navigate=useNavigate()
   
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
@@ -121,6 +121,7 @@ console.log(user)
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
         // ...
+        navigate('/')
         console.log(user)
       }).catch((error) => {
         // Handle Errors here.
@@ -139,6 +140,7 @@ console.log(user)
   
       // The signed-in user info.
       const user = result.user;
+      navigate('/')
     console.log(user)
       // ...
     }).catch((error) => {
@@ -150,6 +152,7 @@ console.log(user)
       // The AuthCredential type that was used.
       
       // ...
+     
     });
   }
 
@@ -174,7 +177,7 @@ console.log(user)
             <br />
           </form>
           <button className='btn btn-info m-3' onClick={signInwithGoogle}>SignUp with google</button>
-          {/* <button className='btn btn-info m-3' onClick={signInwithGitHub}>SignUp with Github</button> */}
+          <button className='btn btn-info m-3' onClick={signInwithGitHub}>SignUp with Github</button>
         </div>
       </div>
       

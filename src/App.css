@@ -1,10 +1,17 @@
 .userPhoto{
-  width: 20%;
+width: 50px;
+}
+.userPhoto img{
+   
 }
 
 .nav-design a{
   text-decoration: none;
   margin: 10px;
-  color: wheat;
+  color: rgb(0, 0, 0);
   font-size: 20px;
+  
+}
+.navdesign{
+  background-color: rgba(73, 149, 15, 0.733);
 }

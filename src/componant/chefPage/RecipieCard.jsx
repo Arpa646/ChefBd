@@ -1,7 +1,8 @@
 import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
-import LazyLoad from 'react-lazyload';
+// import LazyLoad from 'react-lazyload';
 
 const RecipieCard = ({ chef }) => {
     const { name, photo, id, likes, experience, recipieNumber } = chef
@@ -11,13 +12,9 @@ const RecipieCard = ({ chef }) => {
 
                
                 {/* <img src={photo} class="card-img-top" alt="..." /> */}
-                <LazyLoad>
-        <img
-          src=""
-          data-src={photo} 
-          alt="My Image"
-        />
-      </LazyLoad>
+                <LazyLoad  threshold={0.95} onContentVisible={() => {console.log('loaded!')}}>
+      <img class="card-img-top"  src={photo} />
+    </LazyLoad>
                 
                 <div class="card-body">
                     <h5 class="card-title">Chef Name: {name}</h5>

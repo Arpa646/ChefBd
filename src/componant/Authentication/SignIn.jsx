@@ -22,9 +22,7 @@ const SignIn = () => {
     
 const [error,setError]=useState('')
 
-    const handleNameChange = (e) => {
-        setName(e.target.value);
-    };
+  
 
     const handleEmailChange = (e) => {
         setEmail(e.target.value);

@@ -17,6 +17,9 @@ import Signup from './componant/Authentication/Signup';
 import SignIn from './componant/Authentication/SignIn';
 import ContexAuth from './componant/Contexapi';
 import PrivateRoute from './PrivateRoute';
+import Error from './componant/Error';
+import Blog from './componant/blog/Blog';
+import Recipie from './componant/Recipie';
 
 
 
@@ -40,6 +43,19 @@ const router = createBrowserRouter([
   {
     path:"/logIn",
     element:<SignIn></SignIn>
+  },
+  {
+    path:"/blog",
+    element:<Blog></Blog>
+  },
+  {
+    path:"/recipie",
+    element:<Recipie></Recipie>
+  }
+  ,
+  {
+    path: '*',
+    element:<Error></Error>
   }
   
 
