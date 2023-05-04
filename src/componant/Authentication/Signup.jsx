@@ -3,13 +3,16 @@ import React, { useContext, useState } from 'react';
 import { AuthMaster } from '../Contexapi';
 import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import './user.css'
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
 
 
 const Signup = () => {
-  const navigate=useNavigate()
   
+  const navigate=useNavigate()
+  const location=useLocation()
+    console.log(location)
+    const from=location.state?.from?.pathname || '/'
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
     const Githubprovider = new GithubAuthProvider();
@@ -64,6 +67,7 @@ const Signup = () => {
         createUser(email, password)
         .then((userCredential) => {
           const user = userCredential.user;
+          navigate(from)
 alert('user create')
 
 updateprofileData(user,name,photo)
@@ -121,7 +125,7 @@ console.log(user)
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
         // ...
-        navigate('/')
+        navigate(from)
         console.log(user)
       }).catch((error) => {
         // Handle Errors here.
@@ -140,7 +144,7 @@ console.log(user)
   
       // The signed-in user info.
       const user = result.user;
-      navigate('/')
+      navigate(from)
     console.log(user)
       // ...
     }).catch((error) => {
