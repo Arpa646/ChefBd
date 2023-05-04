@@ -5,6 +5,7 @@ const ref = React.createRef();
 import Pdf from "react-to-pdf";
 import Footer from '../Footer';
 //This componant is about some question with answer
+//User can download the  question by pdg
 const Blog = () => {
  
 

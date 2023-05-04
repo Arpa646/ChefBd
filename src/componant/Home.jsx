@@ -8,7 +8,7 @@ import PartTwo from './ExtraPart/PartTwo';
 import { AuthMaster } from './Contexapi';
 import Footer from './Footer';
 
-
+//This is home page where banner navbar footer extra two part
 const Home = () => {
     const {loading } = useContext(AuthMaster)
     if(loading)

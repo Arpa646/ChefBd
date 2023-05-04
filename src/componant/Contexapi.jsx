@@ -1,7 +1,8 @@
 import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged,signInWithPopup, GoogleAuthProvider , signInWithEmailAndPassword, signOut, updateProfile } from 'firebase/auth';
 import React, { createContext, useEffect, useState } from 'react';
 import app from '../Firebase.init';
-
+//this is context api page where user
+//if we share anything then it give all route of the website
 
 const auth=getAuth(app)
 //crating contexu;;

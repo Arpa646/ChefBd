@@ -19,8 +19,7 @@ import ContexAuth from './componant/Contexapi';
 import PrivateRoute from './PrivateRoute';
 import Error from './componant/Error';
 import Blog from './componant/blog/Blog';
-import Recipie from './componant/Recipie';
-import N from './N';
+
 
 
 
@@ -42,10 +41,7 @@ const router = createBrowserRouter([
     path:"/Register",
     element:<Signup></Signup>
   },
-  {
-    path:"/n",
-    element:<N></N>
-  },
+ 
   {
     path:"/logIn",
     element:<SignIn></SignIn>
@@ -54,11 +50,7 @@ const router = createBrowserRouter([
     path:"/blog",
     element:<Blog></Blog>
   },
-  {
-    path:"/recipie",
-    element:<Recipie></Recipie>
-  }
-  ,
+  
   {
     path: '*',
     element:<Error></Error>

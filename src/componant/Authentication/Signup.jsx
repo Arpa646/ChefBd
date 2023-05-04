@@ -5,7 +5,7 @@ import { GithubAuthProvider, GoogleAuthProvider, getAuth, signInWithPopup, updat
 import './user.css'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar';
-
+//This is sign up page user. user can sign in with email,google or gothub
 
 const Signup = () => {
   

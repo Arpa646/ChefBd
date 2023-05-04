@@ -3,7 +3,7 @@ import LazyLoad from 'react-lazy-load';
 import { Link } from 'react-router-dom';
 
 // import LazyLoad from 'react-lazyload';
-
+//This is showing each chef card
 const RecipieCard = ({ chef }) => {
     const { name, photo, id, likes, experience, recipieNumber } = chef
     return (

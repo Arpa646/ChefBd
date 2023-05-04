@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import { FaStar } from 'react-icons/fa';
-
+//if clik see all recipie then it will open  details page where also booked mared all recipie;
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const RecipieDEtails = ({ recipe,index }) => {

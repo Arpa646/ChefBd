@@ -1,5 +1,6 @@
 import React from 'react';
 import './design.css'
+//for bonus create extra part one
 const PartTwo = () => {
     return (
         <div>   

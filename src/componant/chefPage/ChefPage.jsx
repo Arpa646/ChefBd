@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import RecipieCard from './RecipieCard';
+//Here all chef data loaded from vercel 
+//and map 
 import './chef.css'
 const ChefPage = () => {
     const [chef,setChef]=useState(null)
