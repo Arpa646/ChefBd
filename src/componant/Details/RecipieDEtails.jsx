@@ -30,7 +30,7 @@ const RecipieDEtails = ({ recipe,index }) => {
             <div className="card shadow-lg p-3">
           
             
-               
+          <h2>  {recipe.name}</h2>
                 <img className='w-25' src="https://blanquette.qodeinteractive.com/wp-content/uploads/2021/09/b-img-2.jpg" alt="Recipe Image" />
                <h3>Ingridients</h3>
                 <ul>
